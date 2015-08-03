@@ -9,8 +9,8 @@ contributor:
     gutenberg_agent_id: '2858'
     url: http://www.gutenberg.org/2009/agents/2858
     wikipedia:
-    - http://www.womenofbrighton.co.uk/constanceblackgarnett.htm
     - http://en.wikipedia.org/wiki/Constance_Garnett
+    - http://www.womenofbrighton.co.uk/constanceblackgarnett.htm
 covers:
 - attribution: Mario Fuentes, 2015
   cover_type: original
@@ -21,20 +21,20 @@ creator:
   author:
     agent_name: Dostoyevsky, Fyodor
     aliases:
+    - Достоевский, Фёдор Михайлович
+    - Dostoievski, Fiodor
+    - Dostoievski, Fedor Mikhailovitch
     - Dostoievski, Fédor Mikhailovitch
     - Dostoevsky, Fyodor
-    - Dostoievski, Fiodor
-    - Достоевский, Фёдор Михайлович
-    - Dostoievski, Fedor Mikhailovitch
     birthdate: 1821
     deathdate: 1881
     gutenberg_agent_id: '314'
     url: http://www.gutenberg.org/2009/agents/314
     wikipedia: http://en.wikipedia.org/wiki/Fyodor_Dostoevsky
 gutenberg_bookshelf:
+- Best Books Ever Listings
 - Crime Fiction
 - Harvard Classics
-- Best Books Ever Listings
 gutenberg_issued: '2006-03-28'
 gutenberg_type: Text
 identifiers:
@@ -44,10 +44,10 @@ publisher: Project Gutenberg
 rights: Public domain in the USA.
 rights_url: http://creativecommons.org/about/pdm
 subjects:
-- '!lcsh:Psychological fiction'
-- '!lcsh:Saint Petersburg (Russia) -- Fiction'
-- '!lcsh:Detective and mystery stories'
-- '!lcsh:Russia -- Fiction'
-- '!lcc:PG'
+- '!lcsh: Detective and mystery stories'
+- '!lcc: PG'
+- '!lcsh: Psychological fiction'
+- '!lcsh: Saint Petersburg (Russia) -- Fiction'
+- '!lcsh: Russia -- Fiction'
 title: Crime and Punishment
 url: http://www.gutenberg.org/ebooks/2554
