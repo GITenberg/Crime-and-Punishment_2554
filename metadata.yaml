@@ -1,5 +1,5 @@
 _repo: Crime-and-Punishment_2554
-_version: 0.0.2
+_version: 0.1.0
 alternative_title: Prestuplenie i nakazanie. English
 contributor:
   translator:
@@ -51,5 +51,6 @@ subjects:
 - '!lcsh: Psychological fiction'
 - '!lcsh: Saint Petersburg (Russia) -- Fiction'
 - '!lcsh: Russia -- Fiction'
+- GITenberg
 title: Crime and Punishment
 url: http://www.gutenberg.org/ebooks/2554
