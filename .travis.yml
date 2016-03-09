@@ -21,13 +21,15 @@ script:
 - /usr/bin/python asciidoctor-htmlbook/gitberg-machine/machine.py -o . -m metadata.yaml book.html
 - xsltproc -stringparam external.assets.list " " ./HTMLBook/htmlbook-xsl/epub.xsl book.html
 - cp ./HTMLBook/stylesheets/epub/epub.css OEBPS
-- cp cover.jpg OEBPS/cover.jpg
+- if [ -e cover.jpg ]; then cp cover.jpg OEBPS/cover.jpg; fi
 # look for first images directory and one found, copy over to ./OEBPS
 - find . -name images -type d | head -n 1 | xargs -I {} mv {} ./OEBPS/
 - zip -rX book.epub mimetype
 - zip -rX book.epub OEBPS/ META-INF/
 - if test -d "OEBPS/images/"; then zip -rX book.epub OEBPS/images/ ;fi
 - mv book.epub Crime-and-Punishment.epub
+- ebook-convert Crime-and-Punishment.epub Crime-and-Punishment.mobi
+- xvfb-run ebook-convert Crime-and-Punishment.epub Crime-and-Punishment.pdf
 branches:
   only:
   - master
@@ -43,10 +45,15 @@ deploy:
   provider: releases
   api_key:
     secure: t22zBBdaDl4PIHQSlwKIjCHwHgYEFQb69VfHW1X+gli4kvAx6VijQCZy6r1k2mSMkV/Eprb5sLNHptkAX0IkonPKHBd2LbU1zapzdbJs9+bX+kplVAS2rV/BExWSZ3ljXjmD08XbhNRSmJdoSY4NKQpa8tJdyZtTRHGJoCLUvIkjLt1xg6ZUuF2qspTgv3LUnZwrbcaX9P3DY6vVFuVWJu+aPVNqJUSKJZajWsE/AdmQ3ewtYtjP5EDBjlLXUZ5yL9bg9JOK4B4LWHQJ5nRwlUVjmSH6aLMSJCYemHUaF2K797ZTi5RDEg5lzSEC5XULjiXjqJVGnl/XJVxpKc+3ptmcYDk5CxdXR9IApsD5rsHF0yZvDfI03tMVbeHsdo0wigo3u7R3sRJIc+s+qiPORs9xR2WwXmYizZOGH/eI8bcSZ54A1UrALaTIYK35FA+S+7QqyVNlaHQFFElHsD+TpZTH7lmDN8t2XDIIdh9b48TDBBT7eGdPtRE+CZ4GHMNBB/QXjuATe+eq79ACqEdv9Mp+5gs0hLlJmNPfmpn4MZx+l0YwMtiaBaMVHjzKtHD4FCbD+YA3jtKTCA56Z0ixjIq8IctB2s4J2P7FyHEQdh5DMT3QcECCx+DvRG/pVeI4llUxYLtpszIErFIygevFZRZrssrvT55V063XDQhc5VU=
-  file: Crime-and-Punishment.epub
+  file:
+    - Crime-and-Punishment.epub
+    - Crime-and-Punishment.mobi
+    - Crime-and-Punishment.pdf
   "on":
     repo: GITenberg/Crime-and-Punishment_2554
 addons:
   apt:
     packages:
     - xsltproc
+    - xvfb
+    - calibre
