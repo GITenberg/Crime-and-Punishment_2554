@@ -1,5 +1,5 @@
 _repo: Crime-and-Punishment_2554
-_version: 0.2.1
+_version: 0.2.2
 alternative_title: Prestuplenie i nakazanie. English
 contributor:
   translator:
@@ -32,6 +32,8 @@ creator:
     gutenberg_agent_id: '314'
     url: http://www.gutenberg.org/2009/agents/314
     wikipedia: http://en.wikipedia.org/wiki/Fyodor_Dostoevsky
+edition_identifiers:
+  edition_id: http://www.gutenberg.org/ebooks/2554#Crime-and-Punishment
 gutenberg_bookshelf:
 - Best Books Ever Listings
 - Crime Fiction
